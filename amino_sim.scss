@@ -1,0 +1,45 @@
+/*  fonctionnality simulation
+    ========================================================   */ 
+    // Just change the parameters as it fits your needs
+    @mixin layout($sz : xl)
+    {
+        // 15px
+        @if $sz == "m"
+        {
+            font-size: 15px !important;
+            line-height: 1.5 !important;
+        }
+        //  Most used fn
+        @if $sz == "l"
+        {
+            font-size: 17px !important;
+            font-family: arial !important;
+            line-height: 1.5;
+            a, button 
+            {
+                min-width: 100px !important;
+                min-height: 50px !important;
+                margin: 25px !important;
+                display: inline-flex !important;
+                align-items: center !important;
+                &:hover
+                {
+                    outline: 2px blue solid !important;
+                }
+            }
+        }
+        // Classic xl grid
+        @if $sz == "xl"
+        {
+            font-size: 30px !important;
+            line-height: 1.5 !important;
+        }
+        //  The destroyer 
+        @if $sz == "xxl"
+        {
+            font-size: 30px !important;
+            line-height: 5 !important;
+            letter-spacing: 0.7em !important;
+            word-spacing: 2em !important;
+        }
+    }
