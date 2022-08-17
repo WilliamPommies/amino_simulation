@@ -1,20 +1,80 @@
-    <button onclick="closeWindow()" class="close">X</button>
-    <div class="sim_modale_header">
-      <img class="modale-logo-faciliti" src="https://www.facil-iti.fr/wp-content/uploads/2017/06/logo_facil_iti.svg" alt="logo FACIL'iti">
-      <span class="sim_modale_title">Outil de simulation pour Audit</span>
-    </div>
-    <div class="sim_modale_select">
-      <label for="pet-select">Choisissez une combinaison:</label>
+        <button onclick="closeWindow()" class="close">X</button>
+        <div class="sim_modale_header">
+          <img class="modale-logo-faciliti" src="https://www.facil-iti.fr/wp-content/uploads/2017/06/logo_facil_iti.svg" alt="logo FACIL'iti">
+          <span class="sim_modale_title">Outil de simulation pour Audit</span>
+        </div>
+        <div class="sim_modale_select">
+          <label for="pet-select">Choisissez une combinaison:</label>
 
-      <select name="combinaisons" id="sim_combines">
-          <option value="">Choisir</option>
-          <option value="m">Font-size 15</option>
-          <option value="l">Font-size 17 + Arial + Link-Spacing </option>
-          <option value="xl">Font-size 30</option>
-          <option value="xxl">Font-size 30 + Line-Spacing 6</option>
-          <option value="xxl2">Font-size 30 + Letter-spacing 3</option>
-      </select>
-    </div>
+          <select name="combinaisons" id="sim_combines">
+              <option value="">Choisir</option>
+              <option value="m">Font-size 15</option>
+              <option value="l">Font-size 17 + Arial + Link-Spacing </option>
+              <option value="xl">Font-size 30</option>
+              <option value="xxl">Font-size 30 + Line-Spacing 6</option>
+              <option value="xxl2">Font-size 30 + Letter-spacing 3</option>
+          </select>
+        </div>
+      <style>
+        #sim_modale
+        {
+          display: none;
+          height: auto;
+          width: 25vw;
+          position: fixed;
+          top: 50%;
+          left: calc(50% - (25vw / 2)); 
+          right: auto;
+          bottom: auto; 
+          box-shadow : 0 6px 6px rgba(0,0,0,0.2);
+          flex-direction: column;
+          padding: 25px;
+          background-color: #fff;
+        }
+        .sim_modale_header
+        {
+          display: inline-flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          margin-bottom: 15px;
+        }
+        .modale-logo-faciliti
+        {
+          height: auto;
+          max-width: 100px;
+          margin-left: 0;
+        }
+        .sim_modale_title
+        {
+          font-weight: bold;
+        }
+        .sim_modale_select
+        {
+          display : flex;
+          flex-direction : column;
+        }
+        .sim_modale_select label
+        {
+          margin-bottom: 15px;
+        }
+        .close
+        {
+          margin-bottom: 15px;
+          border: 0;
+          background: none;
+          width: 50px;
+          cursor: pointer;
+          padding: 5px;
+          border-radius: 5px;
+          margin: 0 0 10px auto;
+        }
+        .close:hover
+        {
+          background-color :#cc0000;
+          color: #fff;
+        }
+      </style> 
     <script>
       function closeWindow() {
         document.getElementById('sim_modale').style.display = 'none';
@@ -28,63 +88,4 @@
       }
       document.onkeydown = KeyPress;
     </script>
-  <style>
-    #sim_modale
-    {
-      display: none;
-      height: auto;
-      width: 25vw;
-      position: fixed;
-      top: 50%;
-      left: calc(50% - (25vw / 2)); 
-      right: auto;
-      bottom: auto; 
-      box-shadow : 0 6px 6px rgba(0,0,0,0.2);
-      flex-direction: column;
-      padding: 25px;
-      background-color: #fff;
-    }
-    .sim_modale_header
-    {
-      display: inline-flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      margin-bottom: 15px;
-    }
-    .modale-logo-faciliti
-    {
-      height: auto;
-      max-width: 100px;
-      margin-left: 0;
-    }
-    .sim_modale_title
-    {
-      font-weight: bold;
-    }
-    .sim_modale_select
-    {
-      display : flex;
-      flex-direction : column;
-    }
-    .sim_modale_select label
-    {
-      margin-bottom: 15px;
-    }
-    .close
-    {
-      margin-bottom: 15px;
-      border: 0;
-      background: none;
-      width: 50px;
-      cursor: pointer;
-      padding: 5px;
-      border-radius: 5px;
-      margin: 0 0 10px auto;
-    }
-    .close:hover
-    {
-      background-color :#cc0000;
-      color: #fff;
-    }
-  </style> 
+
