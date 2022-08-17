@@ -1,74 +1,85 @@
   <button onclick="closeWindow()" class="close">X</button>
-  <div class="sim_modale_header">
-    <img class="logo-faciliti" src="https://www.facil-iti.fr/wp-content/uploads/2017/06/logo_facil_iti.svg" alt="logo FACIL'iti">
-    <span class="sim_modale_title">Outil de simulation pour Audit</span>
-  </div>
-  <div class="sim_modale_select">
-    <label for="pet-select">Choisissez une combinaison:</label>
+    <div class="sim_modale_header">
+      <img class="logo-faciliti" src="https://www.facil-iti.fr/wp-content/uploads/2017/06/logo_facil_iti.svg" alt="logo FACIL'iti">
+      <span class="sim_modale_title">Outil de simulation pour Audit</span>
+    </div>
+    <div class="sim_modale_select">
+      <label for="pet-select">Choisissez une combinaison:</label>
 
-    <select name="combinaisons" id="sim_combines">
-        <option value="">Choisir</option>
-        <option value="m">Font-size 15</option>
-        <option value="l">Font-size 17 + Arial + Link-Spacing </option>
-        <option value="xl">Font-size 30</option>
-        <option value="xxl">Font-size 30 + Line-Spacing 6</option>
-        <option value="xxl2">Font-size 30 + Letter-spacing 3</option>
-    </select>
-  </div>
-  <script>
-    function closeWindow() {
-      document.getElementById('sim_modale').style.display = 'none';
+      <select name="combinaisons" id="sim_combines">
+          <option value="">Choisir</option>
+          <option value="m">Font-size 15</option>
+          <option value="l">Font-size 17 + Arial + Link-Spacing </option>
+          <option value="xl">Font-size 30</option>
+          <option value="xxl">Font-size 30 + Line-Spacing 6</option>
+          <option value="xxl2">Font-size 30 + Letter-spacing 3</option>
+      </select>
+    </div>
+    <script>
+      function closeWindow() {
+        document.getElementById('sim_modale').style.display = 'none';
+      }
+      function KeyPress(e) {
+        var evtobj = window.event? event : e
+        if (evtobj.keyCode == 90 && evtobj.ctrlKey && evtobj.shiftKey) 
+        {
+          document.getElementById('sim_modale').style.display = 'block';
+        };
+      }
+      document.onkeydown = KeyPress;
+    </script>
+  <style>
+    #sim_modale
+    {
+      height: 35vw;
+      width: 35vw;
+      position: absolute;
+      top: auto;
+      left: auto; 
+      right: auto;
+      bottom: auto; 
+      border: 1px ccc solid;  
+      display: none;
     }
-    function KeyPress(e) {
-      var evtobj = window.event? event : e
-      if (evtobj.keyCode == 90 && evtobj.ctrlKey && evtobj.shiftKey) 
-      {
-        document.getElementById('sim_modale').style.display = 'block';
-      };
+    .sim_modale_header
+    {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 15px;
     }
-    document.onkeydown = KeyPress;
-  </script>
-<style>
-  #sim_modale
-  {
-    height: 35vw;
-    width: 35vw;
-    position: absolute;
-    top: auto;
-    left: auto; 
-    right: auto;
-    bottom: auto; 
-    border: 1px ccc solid;  
-    display: none;
-  }
-  .sim_modale_header
-  {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 15px;
-  }
-  .logo-faciliti
-  {
-    height: auto;
-    max-width: 100px;
-  }
-  .sim_modale_title
-  {
-    font-weight: bold;
-  }
-  .sim_modale_select
-  {
-    display : flex;
-    flex-direction : column;
-  }
-  .sim_modale_select label
-  {
-    margin-bottom: 15px;
-  }
-  .close
-  {
-    margin: auto 0 auto auto;
-  }
-</style>
+    .logo-faciliti
+    {
+      height: auto;
+      max-width: 100px;
+    }
+    .sim_modale_title
+    {
+      font-weight: bold;
+    }
+    .sim_modale_select
+    {
+      display : flex;
+      flex-direction : column;
+    }
+    .sim_modale_select label
+    {
+      margin-bottom: 15px;
+    }
+    .close
+    {
+      margin-bottom: 15px;
+      border: 0;
+      background: none;
+      width: 50px;
+      cursor: pointer;
+      padding: 5px;
+      border-radius: 5px;
+    }
+    .close:hover
+    {
+      background: #000;
+      color: #fff;
+    }
+  </style> 
