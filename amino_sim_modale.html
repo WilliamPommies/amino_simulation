@@ -5,7 +5,7 @@
     <span class="sim_modale_title">Outil de simulation pour Audit</span>
     <div class="sim_modale_select">
       <label for="pet-select">Choisissez une combinaison:</label>
-      <select name="combinaisons" id="sim_combines" onchange="getOption()">
+      <select name="combinaisons" id="sim_combines">
           <option value="">Choisir</option>
           <option value="m">Font-size 15</option>
           <option value="l">Font-size 17 + Arial + Link-Spacing </option>
@@ -16,14 +16,6 @@
   </div>
   <button class="process"> Ok </button>
   <p class="output hidden"></p>
-
-  <script type="text/javascript">
-      function getOption() {
-        let selectElement = document.querySelector('#sim_combines');
-        let output = selectElement.value;
-        document.querySelector('.output').textContent = output;
-  }
-  </script>
   <style>
     #sim_modale
     {
