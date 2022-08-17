@@ -1,58 +1,60 @@
-<div class="sim_modale_header">
-    <img class="logo-faciliti" src="https://www.facil-iti.fr/wp-content/uploads/2017/06/logo_facil_iti.svg" alt="logo FACIL'iti">
-    <span class="sim_modale_title">Outil de simulation pour Audit</span>
-  </div>
-  <div class="sim_modale_select">
-    <label for="pet-select">Choisissez une combinaison:</label>
-
-    <select name="combinaisons" id="sim_combines">
-        <option value="">Choisir</option>
-        <option value="m">Font-size 15</option>
-        <option value="l">Font-size 17 + Arial + Link-Spacing </option>
-        <option value="xl">Font-size 30</option>
-        <option value="xxl">Font-size 30 + Line-Spacing 6</option>
-        <option value="xxl2">Font-size 30 + Letter-spacing 3</option>
-    </select>
-  </div>
-  <style>
-      #sim_modale
-      {
-        height: auto;
-        width: 25vw;
-        position: absolute; 
-        top: 50%;
-        left: 30%;
-        background: #fff;
-        z-index: 999999;
-        padding: 25px;
-        right: auto;
-        box-shadow : 0 6px 6px rgba(0,0,0,0.2);
-      }
-      .sim_modale_header
-      {
-          display: inline-flex;
-          align-items: center;
-          justify-content: space-between;
-          width: 100%;
-          margin-bottom: 15px;
-      }
-      .logo-faciliti
-      {
-        height: auto;
-        max-width: 100px;
-        margin: 0;
-      }
-      .sim_modale_title
-      {
-        font-weight: bold;
-      }
-      .sim_modale_select
-      {
-        display : flex;
-        flex-direction : column;
-      }
-      .sim_modale_select label
-      {
+<div class="sim_modale_container">
+    <div class="sim_modale_header">
+        <img class="logo-faciliti" src="https://www.facil-iti.fr/wp-content/uploads/2017/06/logo_facil_iti.svg" alt="logo FACIL'iti">
+        <span class="sim_modale_title">Outil de simulation pour Audit</span>
+      </div>
+      <div class="sim_modale_select">
+        <label for="pet-select">Choisissez une combinaison:</label>
+    
+        <select name="combinaisons" id="sim_combines">
+            <option value="">Choisir</option>
+            <option value="m">Font-size 15</option>
+            <option value="l">Font-size 17 + Arial + Link-Spacing </option>
+            <option value="xl">Font-size 30</option>
+            <option value="xxl">Font-size 30 + Line-Spacing 6</option>
+            <option value="xxl2">Font-size 30 + Letter-spacing 3</option>
+        </select>
+    </div>
+</div>
+<style>
+    .sim_modale_container
+    {
+    height: auto;
+    width: 25vw;
+    position: absolute; 
+    top: 50%;
+    left: 30%;
+    background: #fff;
+    z-index: 999999;
+    padding: 25px;
+    right: auto;
+    box-shadow : 0 6px 6px rgba(0,0,0,0.2);
+    }
+    .sim_modale_header
+    {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
         margin-bottom: 15px;
-      }
-  </style>
+    }
+    .logo-faciliti
+    {
+    height: auto;
+    max-width: 100px;
+    margin: 0;
+    }
+    .sim_modale_title
+    {
+    font-weight: bold;
+    }
+    .sim_modale_select
+    {
+    display : flex;
+    flex-direction : column;
+    }
+    .sim_modale_select label
+    {
+    margin-bottom: 15px;
+    }
+</style>
