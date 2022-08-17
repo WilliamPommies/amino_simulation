@@ -2,17 +2,17 @@
 {
     font-size: 17px !important;
     font-family: arial !important;
-    line-height: 1.5;
-    a, button 
-    {
-        min-width: 100px !important;
-        min-height: 50px !important;
-        margin: 25px !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        &:hover
-        {
-            outline: 2px blue solid !important;
-        }
-    }
+    line-height: 1.5 !important;
+}
+:root a, :root button 
+{
+    min-width: 100px !important;
+    min-height: 50px !important;
+    margin: 25px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+}
+:root a:hover, :root button:hover
+{
+    outline: 2px blue solid !important;
 }
