@@ -72,21 +72,4 @@
       background-color :#cc0000;
       color: #fff;
     }
-  </style> 
-  <script>
-      function closeWindow() {
-        document.getElementById('sim_modale').style.display = 'none';
-      }
-      function KeyPress(e) {
-        var evtobj = window.event? event : e
-        if (evtobj.keyCode == 45 && evtobj.ctrlKey) 
-        {
-          document.getElementById('sim_modale').style.display = 'flex';
-        };
-      }
-      document.onkeydown = KeyPress;
-   </script>
-
-
-
-
+  </style>
