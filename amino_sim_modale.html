@@ -1,6 +1,6 @@
     <button onclick="closeWindow()" class="close">X</button>
     <div class="sim_modale_header">
-      <img class="logo-faciliti" src="https://www.facil-iti.fr/wp-content/uploads/2017/06/logo_facil_iti.svg" alt="logo FACIL'iti">
+      <img class="modale-logo-faciliti" src="https://www.facil-iti.fr/wp-content/uploads/2017/06/logo_facil_iti.svg" alt="logo FACIL'iti">
       <span class="sim_modale_title">Outil de simulation pour Audit</span>
     </div>
     <div class="sim_modale_select">
@@ -23,7 +23,7 @@
         var evtobj = window.event? event : e
         if (evtobj.keyCode == 45 && evtobj.ctrlKey && evtobj.shiftKey) 
         {
-          document.getElementById('sim_modale').style.display = 'flex';
+          document.getElementById('sim_modale').style.display = 'flex !important';
         };
       }
       document.onkeydown = KeyPress;
@@ -31,16 +31,18 @@
   <style>
     #sim_modale
     {
-      height: 35vw;
+      display: none;
+      height: auto;
       width: 25vw;
       position: fixed;
       top: 50%;
       left: calc(50% - (25vw / 2)); 
       right: auto;
       bottom: auto; 
-      border: 1px #ccc solid;  
-      display: none;
+      box-shadow : 0 6px 6px rgba(0,0,0,0.2);
       flex-direction: column;
+      padding: 25px;
+      background-color: #fff;
     }
     .sim_modale_header
     {
@@ -50,10 +52,11 @@
       width: 100%;
       margin-bottom: 15px;
     }
-    .logo-faciliti
+    .modale-logo-faciliti
     {
       height: auto;
       max-width: 100px;
+      margin-left: 0;
     }
     .sim_modale_title
     {
